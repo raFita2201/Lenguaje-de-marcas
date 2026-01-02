@@ -5,20 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallumbos Ciruelo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
+<header>
+    <section class="titulo">
+        <h1>Gallumbos Ciruelo</h1>
+        <p><strong>La comodidad empieza por dentro</strong></p>
+    </section>
+
+
+</header>
 
 <body>
 
-    <header>
-        <figure>
-            <img src="gallumb.webp" width="100" height="100" alt="Logo Gallumbos Ciruelo">
-        </figure>
-        <h1>Gallumbos Ciruelo</h1>
-        <p><strong>La comodidad empieza por dentro</strong></p>
-    </header>
 
-    <nav>
+
+    <nav class="menu">
         <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#productos">Productos</a></li>
@@ -37,8 +40,8 @@
                 nuestro clientes lo mejor del mercado.</p>
         </section>
 
-        <!-- todo: añadir par de productos y hacer modificaciones css
-         -->
+        
+         
         <section id="productos">
             <h2>Nuestra Colección</h2>
             <article class="Boxers">
@@ -73,28 +76,28 @@
                 </label>
 
                 <label for="consulta">Tipo de consulta
-                <select name="tipo-de-consultas" id="tipoConsultas">
-                    <option value="pedidos">Pedidos</option>
-                    <option value="devoluciones">Devoluciones</option>
-                    <option value="otros">otros</option>
-                </select>
-            </label>
+                    <select name="tipo-de-consultas" id="tipoConsultas">
+                        <option value="pedidos">Pedidos</option>
+                        <option value="devoluciones">Devoluciones</option>
+                        <option value="otros">otros</option>
+                    </select>
+                </label>
 
 
             </fieldset>
 
             <fieldset>
-                    <legend>Mensaje</legend>
-                    <label for="mensaje">
-                        <textarea id="textarea1" rows="4" cols="40"></textarea>
-                    </label>
-                    
-                    <button type="submit">Enviar</button>
-                </fieldset>
+                <legend>Mensaje</legend>
+                <label for="mensaje">
+                    <textarea id="textarea1" rows="4" cols="40"></textarea>
+                </label>
 
-            
+                <button type="submit">Enviar</button>
+            </fieldset>
 
-            
+
+            <!--    hola euwi rafa es un puto paga fantas que se compra un ordenador en vez de irse de viaje con sus amigos, eso es de pagafantas????-->
+
         </form>
 
 
