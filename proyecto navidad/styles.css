@@ -15,6 +15,7 @@ header {
     align-items: center;
 }
 
+
 body {
     padding: 1.5em;
     width: 100%;
@@ -59,9 +60,10 @@ h1, h2, h3 {
 }
 
 .menu a {
-    text-decoration: none;
+    text-decoration: underline;
     color: #139ab8;
     font-weight: bold;
+
 }
 
 button {
@@ -115,4 +117,7 @@ img {
     .productos {
         gap: 0.5em;
     }
+    
+
+
 }
