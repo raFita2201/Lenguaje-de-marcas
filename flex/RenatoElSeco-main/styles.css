@@ -23,5 +23,38 @@ header {
 
 .productos {
     display: flex;
-    gap: 20px;    
+    flex-wrap: wrap; /* al hacer zoom se reordenan*/
+    gap: 20px;
+    justify-content: center;/*start: izq -> dcha (default)*/
+}
+.tarjeta {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /*añade opacidad*/
+    transition: transform 1s ease, box-shadoww 0.3 ease;
+    text-align: center;
+    overflow: hidden;
+    flex: 1 1 calc(20% -20px);/*tercer parámetro, no incluye la separación entre ellas, como el gap es 20px se lo restamos. calc(100/5 -20px) */
+    max-width: calc(20% -20px);
+    min-width: 200px; /* min a partir del cual crea que la img no se apreciará con los suficientes detalles que se espera para su interpretación*/
+
+}
+.tarjeta img {
+    width: 100%;
+    height: auto;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 800px) {
+    .logo {
+        width: 250px;
+    }
+    .tarjeta {
+        flex: 1 1 calc(25% -20);
+        max-width: calc(25% -20);
+    }
 }
