@@ -49,6 +49,51 @@ header {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
+.demo-flex {
+
+    padding: 40px;
+    background-color: #dcdcdc;
+    margin: 40px;
+    border-radius: 10px; /* no es necesario pero weno*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+} 
+.contenedor-flex {
+
+    display: flex; /* se colocan uno detrás del otro*/
+    /*gap: 20px;*/
+    justify-content: space-between;
+    background-color: aliceblue;
+}
+
+.item {
+    padding: 20px;
+    text-align: center;
+    font-weight: bold; /*efectos sobre la letra */
+    flex: 1 1 auto /* todos crecen al mismo ritmo se reparten el tamaño por igual */
+}
+
+.item1 {background-color: red;}
+.item2 {background-color: blue;}
+.item3 {background-color: green;}
+
+.item1 {
+    flex-grow: 1;
+    flex-shrink: 1; /*decrecer*/
+    order: 2;
+}
+
+.item2{
+    flex-grow: 2; /* marca el ritmo al que crece el elemento respecto a los demás */
+    flex-shrink: 2;
+    order: 1;
+}
+
+.item3 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    order: 3; /* para manipular esto debemos saber cuántos elementos hay por línea. En la consulta SQL ya le ponemos el orden que querramos.*/
+}
+
 @media (max-width: 800px) {
     .logo {
         width: 250px;
