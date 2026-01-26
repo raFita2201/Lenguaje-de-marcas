@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+
+
+
+}
+
+body{
+     margin: 0;
+     font-family: Arial, Helvetica, sans-serif;
+     background-color: #f3f5f7;
+     color: #1f2929;
+
+
+}  
+
+.topbar{
+
+    padding: 20px;
+    background-color: darkblue;
+    color: #fff;
+}
+
+.logo {
+    height: auto;   
+    width: 200px;
+    border-radius: 8px;
+}
+.header-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid; 
+
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: center;
+
+
+}
+.title-h1{
+    margin: 0;
+    font-size: 40px;
+}
+.card {
+
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 10px 20px rgb(0, 0, 0, 0.1);
+}
+
+.page{
+    max-width: 1100px;
+    margin: 18px auto;
+    padding: 0 14px;
+    display: grid;
+
+    gap: 14px;
+
+    grid-template-columns: 1fr 2fr 1fr;
+
+    grid-template-areas: "nav main sidebar" "nav main widgets"  "footer footer footer";
+
+    
+    
+    
+}
+
+.nav{    grid-area: nav;    }/*forma en la q entiende grip que seccion quieres*/
+.main{ grid-area: main;}
+.sidebar{grid-area: sidebar;}
+.widgets {grid-area: widgets;}
+.footer{ grid-area: footer;} 
+
+.grid-gallery{
+    margin-top: 12px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /*min recomendado 160 px*/
+    grid-auto-rows: 110px;
+
+}
+
+
+.photo {
+
+    background-color: yellow;
+    border-radius: 12px;
+    border: 1px solid black;
+    font-weight: 700; /*equivale a bold el 700*/
+
+}
+
+.photo.big {
+    background-color: red;
+    grid-column: span 2;
+}
+
+.photo.tall {
+    background-color: blue;
+    grid-row: span 2;
+}
+.photo.wide{
+    grid-column: span 2;
+    background-color: green;
+    
+
+}
+
+.widgets-grid{
+    margin-top: 12px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2,1fr);
+}
+
+@media (max-witdth: 900px){
+
+    .page{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "nav nav"
+        "main main"
+        "sidebar widgets"
+        "footer footer";
+    }
+
+    
+}
+@media (max-width:500px){
+    .page{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "nav"
+        "main"
+        "sidebar"
+        "widgets"
+        "footer";
+    }
+}
